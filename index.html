@@ -3,589 +3,338 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charles Van C. Laganson — Registered Electrical Engineer</title>
-  <meta name="description" content="Registered Electrical Engineer with 6+ years of experience in electrical construction, building systems, MEPFS, project engineering, and field engineering. Based in Davao City, Philippines. Open to Australian projects and opportunities." />
+  <title>Charles Van C. Laganson — Engineering Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @page { size: A4; margin: 14mm 16mm; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Charles Van C. Laganson — Registered Electrical Engineer" />
-  <meta property="og:description" content="Registered Electrical Engineer with 6+ years of experience in electrical construction, building systems, MEPFS, and project engineering." />
-  <meta property="og:url" content="https://charlesvanlaganson.vercel.app" />
-  <meta property="og:image" content="https://charlesvanlaganson.vercel.app/cvl.jpeg" />
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 9.5pt; line-height: 1.55; color: #1a1a2e;
+      background: #f0f1f4; -webkit-font-smoothing: antialiased;
+    }
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Charles Van C. Laganson — Registered Electrical Engineer" />
-  <meta name="twitter:description" content="Registered Electrical Engineer with 6+ years of experience in electrical construction, building systems, MEPFS, and project engineering." />
-  <meta name="twitter:image" content="https://charlesvanlaganson.vercel.app/cvl.jpeg" />
+    .page { max-width: 210mm; margin: 20px auto; background: white; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    @media print { body { background: white; } .page { box-shadow: none; margin: 0; padding: 0; } .no-print { display: none !important; } }
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    /* ── PRINT BUTTON ─────────────────────────────── */
+    .print-bar {
+      max-width: 210mm; margin: 20px auto 0; display: flex; justify-content: flex-end; gap: 10px;
+    }
+    .print-btn {
+      padding: 10px 20px; border: none; border-radius: 6px; font-size: 13px;
+      font-weight: 600; cursor: pointer; font-family: inherit; transition: all 0.2s;
+    }
+    .print-btn-primary { background: #5b5ea6; color: white; }
+    .print-btn-primary:hover { background: #4a4d8f; }
+
+    /* ── HEADER ────────────────────────────────────── */
+    .header { display: flex; align-items: stretch; background: #1a1a2e; color: white; }
+    .header-photo { width: 200px; min-height: 180px; flex-shrink: 0; overflow: hidden; }
+    .header-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .header-content { flex: 1; padding: 28px 32px; display: flex; flex-direction: column; justify-content: center; }
+    .header-name { font-size: 24pt; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+    .header-title { font-size: 10pt; font-weight: 400; color: #a5a6f6; margin-top: 4px; letter-spacing: 0.01em; }
+    .header-details { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 14px; font-size: 8pt; color: #c4c5d6; }
+    .header-details a { color: #c4c5d6; text-decoration: none; }
+
+    /* ── BODY GRID ─────────────────────────────────── */
+    .body { display: grid; grid-template-columns: 200px 1fr; }
+
+    /* ── SIDEBAR ───────────────────────────────────── */
+    .sidebar { background: #f5f5fa; padding: 22px 18px; border-right: 1px solid #e4e5ec; }
+    .sidebar-section { margin-bottom: 16px; }
+    .sidebar-title { font-size: 7.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #5b5ea6; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #dddee8; }
+    .sidebar-item { font-size: 8pt; color: #3a3a5c; margin-bottom: 2px; line-height: 1.5; }
+    .sidebar-item strong { color: #1a1a2e; }
+    .sidebar-label { font-size: 7pt; color: #7a7b98; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 8px; margin-bottom: 3px; font-weight: 600; }
+    .sidebar-skill-group { margin-bottom: 10px; }
+    .sidebar-skill-group h4 { font-size: 7.5pt; font-weight: 600; color: #1a1a2e; margin-bottom: 2px; }
+    .sidebar-skill-list { font-size: 7.5pt; color: #4a4a6a; line-height: 1.5; }
+    .info-row { display: flex; justify-content: space-between; font-size: 7.5pt; margin-bottom: 1px; }
+    .info-row .label { color: #7a7b98; }
+    .info-row .value { color: #1a1a2e; font-weight: 500; text-align: right; }
+    .developing-label { font-size: 6.5pt; color: #8a6d3b; background: #fef9e7; padding: 1px 5px; border-radius: 3px; display: inline-block; margin-bottom: 3px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    /* ── MAIN ──────────────────────────────────────── */
+    .main { padding: 22px 28px; }
+    .section { margin-bottom: 14px; }
+    .section-title { font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #5b5ea6; padding-bottom: 4px; border-bottom: 1px solid #e4e5ec; margin-bottom: 8px; }
+    .summary { font-size: 9pt; color: #333; line-height: 1.65; }
+
+    /* ── Experience ─────────────────────────────────── */
+    .exp-entry { margin-bottom: 10px; page-break-inside: avoid; }
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+    .exp-role { font-size: 9.5pt; font-weight: 600; color: #1a1a2e; }
+    .exp-date { font-size: 7.5pt; font-weight: 500; color: #5b5ea6; white-space: nowrap; }
+    .exp-company { font-size: 8pt; color: #5a5a7a; font-style: italic; }
+    .exp-details { margin-top: 3px; padding-left: 14px; }
+    .exp-details li { font-size: 8pt; color: #333; margin-bottom: 1.5px; line-height: 1.5; }
+    .exp-details li::marker { color: #5b5ea6; }
+
+    /* ── Certifications ─────────────────────────────── */
+    .cert-list { padding-left: 14px; }
+    .cert-list li { font-size: 8pt; color: #333; margin-bottom: 1.5px; line-height: 1.45; }
+    .cert-list li::marker { color: #5b5ea6; }
+    .cert-date { color: #888; font-size: 7pt; }
+
+    /* ── Education ──────────────────────────────────── */
+    .edu-entry { margin-bottom: 5px; }
+    .edu-degree { font-size: 9pt; font-weight: 600; color: #1a1a2e; }
+    .edu-school { font-size: 8pt; color: #4a4a6a; }
+    .edu-year { font-size: 7.5pt; color: #5b5ea6; }
+
+    /* ── Page break ─────────────────────────────────── */
+    .page-break { page-break-before: always; }
+
+    /* ── Digital note ───────────────────────────────── */
+    .digital-note { background: #f5f5fa; border: 1px solid #e4e5ec; border-radius: 6px; padding: 10px 14px; margin-top: 4px; }
+    .digital-note p { font-size: 8pt; color: #4a4a6a; line-height: 1.5; }
+    .digital-note .tech-list { font-size: 7.5pt; color: #5b5ea6; margin-top: 4px; }
+
+    /* ── MOBILE ─────────────────────────────────────── */
+    @media screen and (max-width: 768px) {
+      body { font-size: 11pt; }
+      .page { max-width: 100%; margin: 0; box-shadow: none; }
+      .header { flex-direction: column; text-align: center; }
+      .header-photo { width: 100%; max-height: 280px; }
+      .header-content { padding: 20px 20px 24px; }
+      .header-name { font-size: 20pt; }
+      .header-title { font-size: 11pt; }
+      .header-details { justify-content: center; font-size: 9pt; gap: 6px 16px; }
+      .body { grid-template-columns: 1fr; }
+      .sidebar { border-right: none; border-bottom: 1px solid #e4e5ec; padding: 20px; }
+      .sidebar-title { font-size: 9pt; }
+      .sidebar-item { font-size: 9.5pt; }
+      .sidebar-skill-group h4 { font-size: 9pt; }
+      .sidebar-skill-list { font-size: 9pt; }
+      .info-row { font-size: 9pt; }
+      .main { padding: 20px; }
+      .section-title { font-size: 10pt; }
+      .summary { font-size: 10.5pt; }
+      .exp-header { flex-direction: column; gap: 2px; }
+      .exp-role { font-size: 10.5pt; }
+      .exp-date { font-size: 9pt; }
+      .exp-company { font-size: 9.5pt; }
+      .exp-details li { font-size: 10pt; }
+      .cert-list li { font-size: 9.5pt; }
+      .page-break { page-break-before: auto; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ══════════════ NAVIGATION ══════════════ -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <div class="nav-logo">CVL<span>.</span></div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#expertise">Expertise</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#licenses">Licenses</a></li>
-      <li><a href="#digital">Digital Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-  </div>
-</nav>
+<!-- PRINT BAR -->
+<div class="print-bar no-print">
+  <button class="print-btn print-btn-primary" onclick="window.print()">Print / Save as PDF</button>
+</div>
 
-<!-- ══════════════ HERO ══════════════ -->
-<section class="hero" id="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-badge">Open to Opportunities</div>
-      <h1 class="hero-name">Charles Van C. Laganson</h1>
-      <p class="hero-title">Registered Electrical Engineer</p>
-      <p class="hero-subtitle">Electrical Construction · Building Systems · MEPFS · Project Engineering</p>
-      <div class="hero-location">
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Davao City, Philippines</span>
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Open to Australian Projects · Remote · Relocation</span>
-      </div>
-      <div class="hero-buttons">
-        <a href="#experience" class="btn btn-primary">View Engineering Experience</a>
-        <a href="#projects" class="btn btn-secondary">View Projects</a>
-        <a href="engineering-resume.html" class="btn btn-secondary" target="_blank">Download Engineering Resume</a>
-        <a href="https://www.linkedin.com/in/charles-van-laganson-52536a265/" class="btn btn-secondary" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-    <div class="hero-photo">
+<!-- ═══════════════════ PAGE 1 ═══════════════════ -->
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-photo">
       <img src="cvl.jpeg" alt="Charles Van C. Laganson" />
     </div>
-  </div>
-</section>
-
-<!-- ══════════════ PROFESSIONAL SUMMARY ══════════════ -->
-<section class="section" id="summary">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">About</div>
-      <h2 class="section-title">Professional Summary</h2>
+    <div class="header-content">
+      <div class="header-name">Charles Van C. Laganson</div>
+      <div class="header-title">Registered Electrical Engineer</div>
+      <div class="header-details">
+        <span>Davao City, Philippines 8000</span>
+        <a href="tel:+639205261542">+63 920 526 1542</a>
+        <a href="mailto:cvlaganson10@gmail.com">cvlaganson10@gmail.com</a>
+        <a href="https://www.linkedin.com/in/charles-van-laganson-52536a265/">LinkedIn</a>
+      </div>
     </div>
-    <div class="summary-content">
-      <strong>Registered Electrical Engineer</strong> with over six years of professional experience across electrical construction, field engineering, building systems, facilities engineering, and project coordination. Experienced in supervising electrical installations, cable laying and termination, panel installation, testing and commissioning, MEPFS systems, generators, UPS systems, preventive maintenance, electrical monitoring, and contractor coordination.
-      <br /><br />
-      Professional background includes field engineering for substation monitoring and automation works, electrical construction supervision, and engineering operations for a broadcast facility. Working knowledge of AutoCAD, PlanSwift, and Bluebeam Revu through self-directed learning and practical exposure. Also brings complementary capabilities in software development, AI, and workflow automation.
-    </div>
-  </div>
-</section>
+  </header>
 
-<!-- ══════════════ ENGINEERING EXPERTISE ══════════════ -->
-<section class="section section-alt" id="expertise">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Core Competencies</div>
-      <h2 class="section-title">Engineering Expertise</h2>
-      <p class="section-desc">Areas of genuine professional exposure and hands-on experience</p>
-    </div>
-    <div class="expertise-grid">
+  <!-- BODY -->
+  <div class="body">
 
-      <div class="expertise-card">
-        <div class="expertise-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c8aff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Electrical Construction</h3>
-        <ul class="expertise-list">
-          <li>Electrical rough-ins</li>
-          <li>Cable laying &amp; pulling</li>
-          <li>Cable termination</li>
-          <li>Conduit installation</li>
-          <li>Electrical panel installation</li>
-          <li>Equipment connections</li>
-          <li>Construction supervision</li>
-          <li>Site coordination</li>
-        </ul>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Licenses</div>
+        <div class="sidebar-item"><strong>REE</strong> — Registered Electrical Engineer</div>
+        <div class="sidebar-item" style="font-size:7pt; color:#5b5ea6;">PRC, April 2018</div>
+        <div class="sidebar-item" style="margin-top:5px"><strong>Driver's License</strong></div>
+        <div class="sidebar-item" style="font-size:7pt; color:#5b5ea6;">LTO, June 2019</div>
       </div>
 
-      <div class="expertise-card">
-        <div class="expertise-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c8aff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div>
-        <h3>Building Systems / MEPFS</h3>
-        <ul class="expertise-list">
-          <li>Electrical systems</li>
-          <li>Generator systems</li>
-          <li>UPS systems</li>
-          <li>Building MEPFS monitoring</li>
-          <li>Equipment monitoring</li>
-          <li>Preventive maintenance</li>
-          <li>Corrective maintenance coordination</li>
-          <li>Tenant technical coordination</li>
-        </ul>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Engineering Skills</div>
+        <div class="sidebar-skill-group">
+          <h4>Electrical Construction</h4>
+          <div class="sidebar-skill-list">Rough-ins, Cable Laying, Cable Pulling, Termination, Conduit, Panel Installation, Equipment Connections</div>
+        </div>
+        <div class="sidebar-skill-group">
+          <h4>Building Systems / MEPFS</h4>
+          <div class="sidebar-skill-list">Generators, UPS, Electrical Distribution, HVAC Monitoring, FDAS, Preventive Maintenance</div>
+        </div>
+        <div class="sidebar-skill-group">
+          <h4>Project Engineering</h4>
+          <div class="sidebar-skill-list">Electrician Supervision, Contractor Coordination, Testing &amp; Commissioning, Site Monitoring, Documentation</div>
+        </div>
+        <div class="sidebar-skill-group">
+          <h4>Documentation</h4>
+          <div class="sidebar-skill-list">Load Schedules, Single-Line Diagrams, Electrical Drawings, Quantity Takeoffs, Consumption Reports</div>
+        </div>
       </div>
 
-      <div class="expertise-card">
-        <div class="expertise-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c8aff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 12h6"/><path d="M9 16h6"/></svg></div>
-        <h3>Project &amp; Field Engineering</h3>
-        <ul class="expertise-list">
-          <li>Electrician supervision</li>
-          <li>Contractor coordination</li>
-          <li>Vendor coordination</li>
-          <li>Site monitoring</li>
-          <li>Technical documentation</li>
-          <li>Work scheduling</li>
-          <li>Inspection support</li>
-          <li>Testing &amp; commissioning support</li>
-        </ul>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Software</div>
+        <div class="sidebar-skill-group">
+          <div class="developing-label">Working Knowledge</div>
+          <div class="sidebar-skill-list">AutoCAD, PlanSwift, Bluebeam Revu</div>
+        </div>
+        <div class="sidebar-skill-group" style="margin-top:6px">
+          <h4>General</h4>
+          <div class="sidebar-skill-list">Microsoft Office, Google Workspace</div>
+        </div>
       </div>
 
-      <div class="expertise-card">
-        <div class="expertise-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c8aff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <h3>Electrical Documentation</h3>
-        <ul class="expertise-list">
-          <li>Electrical drawings</li>
-          <li>Quantity takeoffs</li>
-          <li>Electrical estimates</li>
-          <li>Material requirements</li>
-          <li>Load schedules</li>
-          <li>Single-line diagrams</li>
-          <li>Electrical consumption reports</li>
-        </ul>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Digital Skills</div>
+        <div class="sidebar-skill-list" style="font-size:7.5pt; color:#4a4a6a;">JavaScript, React, Next.js, Node.js, PostgreSQL, REST APIs, n8n, AI APIs, Git, Linux</div>
       </div>
 
-    </div>
-  </div>
-</section>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Education</div>
+        <div class="sidebar-item"><strong>BS Electrical Engineering</strong></div>
+        <div class="sidebar-item">Univ. of Southeastern Philippines</div>
+        <div class="sidebar-item" style="color:#5b5ea6; font-size:7pt;">Graduated January 2018</div>
+      </div>
 
-<!-- ══════════════ PROFESSIONAL EXPERIENCE ══════════════ -->
-<section class="section" id="experience">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Career History</div>
-      <h2 class="section-title">Professional Experience</h2>
-    </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Availability</div>
+        <div class="sidebar-item">Open to Australian Projects</div>
+        <div class="sidebar-item">Remote Opportunities</div>
+        <div class="sidebar-item">Relocation</div>
+      </div>
 
-    <div class="timeline">
+    </aside>
 
-      <!-- Building Engineer -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">August 2024 — July 2025</div>
-        <div class="timeline-card">
-          <div class="timeline-role">Building Engineer</div>
-          <div class="timeline-company">People's Television Network, Inc.</div>
-          <div class="timeline-location">Davao City, Philippines</div>
-          <ul class="timeline-details">
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- SUMMARY -->
+      <section class="section">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary">
+          Registered Electrical Engineer with over six years of professional experience across electrical construction, field engineering, building systems, facilities engineering, and project coordination. Experienced in supervising electrical installations, cable laying and termination, panel installation, testing and commissioning, MEPFS systems, generators, UPS systems, preventive maintenance, and contractor coordination. Also brings complementary capabilities in software development, AI, and workflow automation.
+        </p>
+      </section>
+
+      <!-- WORK EXPERIENCE -->
+      <section class="section">
+        <div class="section-title">Professional Experience</div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-role">Building Engineer</span>
+            <span class="exp-date">Aug 2024 – Jul 2025</span>
+          </div>
+          <div class="exp-company">People's Television Network, Inc. — Davao City</div>
+          <ul class="exp-details">
             <li>Monitored and coordinated operation and maintenance of building MEPFS systems and engineering equipment</li>
-            <li>Monitored electrical distribution equipment, generators, UPS systems, HVAC systems, and related building infrastructure</li>
-            <li>Worked with in-house electricians and technical personnel</li>
+            <li>Monitored electrical distribution equipment, generators, UPS systems, HVAC systems, and related infrastructure</li>
             <li>Assigned and coordinated preventive and corrective maintenance activities</li>
-            <li>Coordinated preventive maintenance schedules</li>
-            <li>Monitored equipment condition to support safe and reliable building operations</li>
             <li>Prepared and reviewed electrical consumption reports for building tenants</li>
-            <li>Coordinated with contractors, vendors, and tenants regarding engineering works and technical concerns</li>
+            <li>Coordinated with contractors, vendors, and tenants regarding engineering works</li>
             <li>Maintained engineering documentation and maintenance records</li>
-            <li>Supported engineering-related repairs, maintenance activities, and procurement</li>
-            <li>Helped ensure engineering equipment and systems maintained acceptable levels of operational safety</li>
           </ul>
         </div>
-      </div>
 
-      <!-- Senior Administrative Assistant I (Engineer) -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">March 2021 — August 2024</div>
-        <div class="timeline-card">
-          <div class="timeline-role">Senior Administrative Assistant I (Engineer)</div>
-          <div class="timeline-company">People's Television Network, Inc.</div>
-          <div class="timeline-location">Davao City, Philippines</div>
-          <ul class="timeline-details">
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-role">Senior Administrative Assistant I (Engineer)</span>
+            <span class="exp-date">Mar 2021 – Aug 2024</span>
+          </div>
+          <div class="exp-company">People's Television Network, Inc. — Davao City</div>
+          <ul class="exp-details">
             <li>Provided engineering support for building electrical, mechanical, plumbing, fire-protection, and facility systems</li>
-            <li>Inspected and monitored electrical equipment and building infrastructure with in-house electricians</li>
-            <li>Monitored generators, UPS systems, electrical distribution equipment, and other critical building systems</li>
-            <li>Prepared electrical consumption reports</li>
-            <li>Maintained engineering and facility documentation</li>
-            <li>Assisted with technical reports and project documentation</li>
-            <li>Assisted with procurement requirements and vendor coordination</li>
+            <li>Inspected and monitored electrical equipment and building infrastructure</li>
+            <li>Monitored generators, UPS systems, electrical distribution equipment, and critical building systems</li>
+            <li>Prepared electrical consumption reports and maintained engineering documentation</li>
             <li>Coordinated maintenance activities with contractors and service providers</li>
-            <li>Conducted facility inspections</li>
-            <li>Assisted with engineering safety and maintenance requirements</li>
+            <li>Conducted facility inspections and assisted with procurement and vendor coordination</li>
           </ul>
         </div>
-      </div>
 
-      <!-- Supervising Electrical Engineer -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">April 2019 — March 2021</div>
-        <div class="timeline-card">
-          <div class="timeline-role">Supervising Electrical Engineer</div>
-          <div class="timeline-company">AIMM Builders &amp; Construction Supply</div>
-          <div class="timeline-location">Dipolog City, Philippines</div>
-          <ul class="timeline-details">
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-role">Supervising Electrical Engineer</span>
+            <span class="exp-date">Apr 2019 – Mar 2021</span>
+          </div>
+          <div class="exp-company">AIMM Builders &amp; Construction Supply — Dipolog City</div>
+          <ul class="exp-details">
             <li>Supervised electricians performing electrical installations for construction projects</li>
-            <li>Supervised electrical rough-ins, conduit installation, cable laying, cable pulling, and cable termination</li>
-            <li>Supervised electrical panel installation and coordinated electrical equipment connections</li>
-            <li>Reviewed electrical drawings as part of construction coordination</li>
-            <li>Coordinated electrical installation requirements with other construction activities</li>
-            <li>Worked with electrical plans, load schedules, and single-line diagrams where applicable</li>
-            <li>Performed electrical quantity takeoffs and project estimates where applicable</li>
-            <li>Determined material requirements from electrical drawings</li>
-            <li>Monitored electrical installation work against project specifications</li>
-            <li>Worked in accordance with applicable Philippine Electrical Code requirements</li>
+            <li>Supervised electrical rough-ins, conduit installation, cable laying, pulling, and termination</li>
+            <li>Supervised electrical panel installation and coordinated equipment connections</li>
+            <li>Reviewed electrical drawings, load schedules, and single-line diagrams</li>
+            <li>Performed electrical quantity takeoffs and determined material requirements</li>
             <li>Coordinated testing and commissioning activities</li>
             <li>Oversaw medium-voltage cable termination and jointing activities where applicable</li>
-            <li>Assisted in troubleshooting and coordinating corrective electrical work</li>
+            <li>Worked in accordance with Philippine Electrical Code requirements</li>
           </ul>
         </div>
-      </div>
 
-      <!-- Field Engineer -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">November 2018 — April 2019</div>
-        <div class="timeline-card">
-          <div class="timeline-role">Field Engineer</div>
-          <div class="timeline-company">Miescor Logistics, Inc.</div>
-          <div class="timeline-location">Philippines</div>
-          <ul class="timeline-details">
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-role">Field Engineer</span>
+            <span class="exp-date">Nov 2018 – Apr 2019</span>
+          </div>
+          <div class="exp-company">Miescor Logistics, Inc. — Philippines</div>
+          <ul class="exp-details">
             <li>Supervised electricians performing cable installation and termination for substation monitoring and automation systems</li>
             <li>Coordinated cable routing from substation field panels to building/control panels</li>
-            <li>Monitored cable pulling activities</li>
-            <li>Monitored cable identification and dressing</li>
-            <li>Monitored termination work</li>
+            <li>Monitored cable pulling, identification, dressing, and termination work</li>
             <li>Verified field installation against project drawings and installation requirements</li>
-            <li>Coordinated field activities with electricians and project personnel</li>
             <li>Supported inspection, testing, and completion of electrical field works</li>
           </ul>
         </div>
-      </div>
 
-      <!-- Independent / Freelance -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">2025 — Present</div>
-        <div class="timeline-card">
-          <div class="timeline-role">Independent Digital &amp; Automation Work</div>
-          <div class="timeline-company">Freelance</div>
-          <div class="timeline-location">Davao City, Philippines</div>
-          <ul class="timeline-details">
-            <li>Freelance work involving workflow automation, web application development, AI integrations, and digital systems</li>
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-role">Independent Digital &amp; Automation Work</span>
+            <span class="exp-date">2025 – Present</span>
+          </div>
+          <div class="exp-company">Freelance — Davao City</div>
+          <ul class="exp-details">
+            <li>Workflow automation, web application development, AI integrations, and digital systems</li>
             <li>Supporting client projects with technical automation solutions</li>
-            <li>Building web applications and marketing automation systems</li>
           </ul>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </div>
-</section>
 
-<!-- ══════════════ CAREER TIMELINE ══════════════ -->
-<section class="section section-alt" id="career-timeline">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Progression</div>
-      <h2 class="section-title">Career Timeline</h2>
-    </div>
-    <div class="career-path">
-      <div class="career-step">
-        <div class="career-year">2018</div>
-        <div class="career-role">Registered Electrical Engineer</div>
-        <div class="career-org">PRC Licensed</div>
-      </div>
-      <div class="career-step">
-        <div class="career-year">2018–2019</div>
-        <div class="career-role">Field Engineer</div>
-        <div class="career-org">Miescor Logistics</div>
-      </div>
-      <div class="career-step">
-        <div class="career-year">2019–2021</div>
-        <div class="career-role">Supervising Electrical Engineer</div>
-        <div class="career-org">AIMM Builders</div>
-      </div>
-      <div class="career-step">
-        <div class="career-year">2021–2024</div>
-        <div class="career-role">Sr. Admin Asst I (Engineer)</div>
-        <div class="career-org">PTV Network</div>
-      </div>
-      <div class="career-step">
-        <div class="career-year">2024–2025</div>
-        <div class="career-role">Building Engineer</div>
-        <div class="career-org">PTV Network</div>
-      </div>
-      <div class="career-step">
-        <div class="career-year">2025–Present</div>
-        <div class="career-role">Independent / Freelance</div>
-        <div class="career-org">Digital &amp; Automation</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ══════════════ ENGINEERING PROJECT HIGHLIGHTS ══════════════ -->
-<section class="section" id="projects">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Selected Work</div>
-      <h2 class="section-title">Engineering Experience Highlights</h2>
-    </div>
-    <div class="project-grid">
+      <!-- CERTIFICATES -->
+      <section class="section">
+        <div class="section-title">Training &amp; Professional Development</div>
+        <ul class="cert-list">
+          <li>Installation of Heat-Shrinkable Termination and Jointing Kits on MV Power Cable <span class="cert-date">— Aug 2019</span></li>
+          <li>Fire Detection and Alarm System (FDAS) Seminar <span class="cert-date">— Mar 2022</span></li>
+          <li>Electrical Safety, Electricity Conservation, Solar Electricity, and Building Services Webinar <span class="cert-date">— Mar 2022</span></li>
+          <li>Solar PV Computation and Design Webinar <span class="cert-date">— Jul 2023</span></li>
+        </ul>
+      </section>
 
-      <div class="project-card">
-        <div class="project-card-label">Field Engineer</div>
-        <h3>Substation Monitoring &amp; Automation Field Work</h3>
-        <p class="project-card-employer">Miescor Logistics, Inc.</p>
-        <div class="project-card-tags">
-          <span>Substation Environment</span>
-          <span>Cable Installation</span>
-          <span>Field-Panel Connections</span>
-          <span>Cable Termination</span>
-          <span>Electrician Supervision</span>
-          <span>Inspection &amp; Testing</span>
+      <!-- DIGITAL NOTE -->
+      <section class="section">
+        <div class="section-title">Additional Capability</div>
+        <div class="digital-note">
+          <p>Alongside electrical engineering, I have developed hands-on capabilities in software development, AI, and workflow automation — providing an interdisciplinary perspective across physical infrastructure, digital systems, and process improvement.</p>
+          <div class="tech-list">JavaScript · React · Next.js · Node.js · PostgreSQL · REST APIs · n8n · AI APIs · Git · Linux</div>
         </div>
-      </div>
+      </section>
 
-      <div class="project-card">
-        <div class="project-card-label">Supervising Electrical Engineer</div>
-        <h3>Electrical Construction &amp; Installation</h3>
-        <p class="project-card-employer">AIMM Builders &amp; Construction Supply</p>
-        <div class="project-card-tags">
-          <span>Electrical Rough-ins</span>
-          <span>Conduit Installation</span>
-          <span>Cable Installation</span>
-          <span>Terminations</span>
-          <span>Panel Installation</span>
-          <span>Testing &amp; Commissioning</span>
-          <span>Quantity Takeoffs</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-card-label">Building Engineer</div>
-        <h3>Building Engineering &amp; Critical Systems</h3>
-        <p class="project-card-employer">People's Television Network, Inc.</p>
-        <div class="project-card-tags">
-          <span>Building Electrical Systems</span>
-          <span>Generators</span>
-          <span>UPS</span>
-          <span>MEPFS</span>
-          <span>Preventive Maintenance</span>
-          <span>Facilities Engineering</span>
-          <span>Contractor Coordination</span>
-        </div>
-      </div>
-
-    </div>
+    </main>
   </div>
-</section>
-
-<!-- ══════════════ ENGINEERING SOFTWARE ══════════════ -->
-<section class="section section-alt" id="tools">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Tools</div>
-      <h2 class="section-title">Engineering Software</h2>
-    </div>
-    <div class="tools-grid">
-      <div class="tools-card">
-        <h3>Developing Technical Skills</h3>
-        <div class="tools-level">Working Knowledge / Self-Directed Learning</div>
-        <div class="tools-list">
-          <span>AutoCAD</span>
-          <span>PlanSwift</span>
-          <span>Bluebeam Revu</span>
-        </div>
-      </div>
-      <div class="tools-card">
-        <h3>General Productivity</h3>
-        <div class="tools-level">Regular Use</div>
-        <div class="tools-list">
-          <span>Microsoft Office</span>
-          <span>Google Workspace</span>
-          <span>Technical Documentation</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ PROFESSIONAL LICENSES ══════════════ -->
-<section class="section" id="licenses">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Credentials</div>
-      <h2 class="section-title">Professional Licenses</h2>
-    </div>
-    <div class="credentials-grid">
-      <div class="credential-card">
-        <h3>REE</h3>
-        <div class="credential-full">Registered Electrical Engineer</div>
-        <div class="credential-issuer">Professional Regulation Commission, Philippines</div>
-        <div class="credential-year">2018</div>
-      </div>
-      <div class="credential-card">
-        <h3>Driver's License</h3>
-        <div class="credential-full">Non-Professional / Professional</div>
-        <div class="credential-issuer">Land Transportation Office, Philippines</div>
-        <div class="credential-year">2019</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ EDUCATION ══════════════ -->
-<section class="section section-alt" id="education">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Education</div>
-      <h2 class="section-title">Academic Background</h2>
-    </div>
-    <div class="credentials-grid">
-      <div class="credential-card" style="grid-column: 1 / -1;">
-        <h3>Bachelor of Science in Electrical Engineering</h3>
-        <div class="credential-full">University of Southeastern Philippines</div>
-        <div class="credential-issuer">Davao City, Philippines</div>
-        <div class="credential-year">Graduated January 2018</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ══════════════ TRAINING ══════════════ -->
-<section class="section section-alt" id="training">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Continuing Education</div>
-      <h2 class="section-title">Training &amp; Professional Development</h2>
-    </div>
-    <div class="training-list">
-      <div class="training-item">
-        <span class="training-item-name">Installation of Heat-Shrinkable Termination and Jointing Kits on MV Power Cable</span>
-        <span class="training-item-date">August 2019</span>
-      </div>
-      <div class="training-item">
-        <span class="training-item-name">Fire Detection and Alarm System (FDAS) Seminar</span>
-        <span class="training-item-date">March 2022</span>
-      </div>
-      <div class="training-item">
-        <span class="training-item-name">Electrical Safety, Electricity Conservation, Solar Electricity, and Building Services Webinar</span>
-        <span class="training-item-date">March 2022</span>
-      </div>
-      <div class="training-item">
-        <span class="training-item-name">Solar PV Computation and Design Webinar</span>
-        <span class="training-item-date">July 2023</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ AUSTRALIAN POSITIONING ══════════════ -->
-<section class="section" id="positioning">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Professional Development</div>
-      <h2 class="section-title">Currently Developing</h2>
-      <p class="section-desc">Interested in contributing to Australian engineering projects while continuing to develop familiarity with Australian engineering practices and standards.</p>
-    </div>
-    <div class="developing-grid">
-      <span>Australian Electrical Standards Awareness</span>
-      <span>AS/NZS 3000 Fundamentals</span>
-      <span>Electrical Design Workflow</span>
-      <span>AutoCAD</span>
-      <span>Bluebeam Revu</span>
-      <span>PlanSwift</span>
-      <span>Australian Construction Documentation Practices</span>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ DIGITAL CAPABILITY ══════════════ -->
-<section class="section section-alt" id="digital">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Differentiator</div>
-      <h2 class="section-title">Engineering + Digital Capability</h2>
-    </div>
-    <div class="digital-section">
-      <p class="digital-desc">
-        Alongside electrical engineering, I have developed hands-on capabilities in software development, AI, and workflow automation. This gives me an interdisciplinary perspective across physical infrastructure, digital systems, data, and process improvement.
-      </p>
-      <div class="digital-tags">
-        <span>JavaScript</span>
-        <span>TypeScript</span>
-        <span>React</span>
-        <span>Next.js</span>
-        <span>Node.js</span>
-        <span>PostgreSQL</span>
-        <span>REST APIs</span>
-        <span>n8n</span>
-        <span>AI APIs</span>
-        <span>Git</span>
-        <span>Linux</span>
-      </div>
-      <a href="https://charlesvanlaganson.vercel.app" class="digital-link">View Full Technology Portfolio →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ CONTACT / FOOTER ══════════════ -->
-<footer class="footer" id="contact">
-  <div class="container">
-    <div class="section-header" style="margin-bottom: 32px;">
-      <div class="section-label">Get In Touch</div>
-      <h2 class="section-title">Contact</h2>
-    </div>
-    <div class="footer-links">
-      <a href="mailto:cvlaganson10@gmail.com">cvlaganson10@gmail.com</a>
-      <a href="tel:+639205261542">+63 920 526 1542</a>
-      <a href="https://www.linkedin.com/in/charles-van-laganson-52536a265/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/cvlaganson10" target="_blank">GitHub</a>
-    </div>
-    <p class="footer-copy">&copy; 2025 Charles Van C. Laganson. Registered Electrical Engineer. Davao City, Philippines.</p>
-  </div>
-</footer>
-
-<!-- ══════════════ JS ══════════════ -->
-<script>
-  // Mobile nav toggle
-  const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => links.classList.toggle('active'));
-
-  // Close mobile nav on link click
-  links.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => links.classList.remove('active'));
-  });
-
-  // Smooth scroll offset for fixed nav
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        const offset = 72;
-        const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.expertise-card, .timeline-card, .project-card, .credential-card, .internship-card, .training-item, .tools-card, .career-step').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(el);
-  });
-</script>
+</div>
 
 </body>
 </html>
