@@ -6,7 +6,7 @@
   <title>Charles Van C. Laganson — Engineering Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    @page { size: A4; margin: 14mm 16mm; }
+    @page { size: A4; margin: 0; }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -16,7 +16,17 @@
     }
 
     .page { max-width: 210mm; margin: 20px auto; background: white; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
-    @media print { body { background: white; } .page { box-shadow: none; margin: 0; padding: 0; } .no-print { display: none !important; } }
+
+    @media print {
+      body { background: white; margin: 0; padding: 0; }
+      .page { box-shadow: none; margin: 0; padding: 14mm 16mm; width: 100%; max-width: 100%; }
+      .no-print { display: none !important; }
+      /* Force background colors to print */
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+      /* Prevent links from showing URLs */
+      a[href]::after { content: none !important; }
+      a { text-decoration: none !important; }
+    }
 
     /* ── PRINT BUTTON ─────────────────────────────── */
     .print-bar {
@@ -188,7 +198,7 @@
         <div class="sidebar-title">Software</div>
         <div class="sidebar-skill-group">
           <div class="developing-label">Working Knowledge</div>
-          <div class="sidebar-skill-list">AutoCAD, PlanSwift, Bluebeam Revu, SketchUp</div>
+          <div class="sidebar-skill-list">AutoCAD, PlanSwift, Bluebeam Revu</div>
         </div>
         <div class="sidebar-skill-group" style="margin-top:6px">
           <h4>General</h4>
@@ -210,7 +220,7 @@
 
       <div class="sidebar-section">
         <div class="sidebar-title">Availability</div>
-        <div class="sidebar-item">Open to Overseas Projects</div>
+        <div class="sidebar-item">Open to Australian Projects</div>
         <div class="sidebar-item">Remote Opportunities</div>
         <div class="sidebar-item">Relocation</div>
       </div>
